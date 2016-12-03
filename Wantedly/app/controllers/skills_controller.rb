@@ -1,6 +1,7 @@
 class SkillsController < ApplicationController
+    before_action :authenticate_user!
   def index
-      @skills = Skill.all
+      @skills = Skill.order('point_count desc')
       @skill = Skill.new
   end
 
@@ -11,7 +12,7 @@ class SkillsController < ApplicationController
   end
 
   def show
-  end
+    end
 
   private
    def skills_params

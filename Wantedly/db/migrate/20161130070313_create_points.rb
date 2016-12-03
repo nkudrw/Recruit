@@ -6,5 +6,7 @@ class CreatePoints < ActiveRecord::Migration
 
       t.timestamps null: false
     end
+    add_index :relationships, :user_id
+    add_index :relationships, :skill_id
   end
 end
