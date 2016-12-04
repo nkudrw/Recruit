@@ -4,7 +4,7 @@ Rails.application.routes.draw do
       resources :points, only: [:create, :destroy]
     end
 
-  resources :users, only:[:index]
+  resources :users, only:[:index,:show,:create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,17 @@
+<h2>スキル一覧</h2>
+    <% @user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill_user| %>
+    <% tmp = skill_user.name %>
+    <%= skill_user.name %>
+    <%= render partial: 'points/point', locals: { skill: skill_user ,user: @user} %>
+
+    <% @user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill| %>
+    <% if tmp != skill.name %>
+    <%= skill.name %>
+    <%= render partial: 'points/point', locals: { skill: skill ,user: @user} %>
+    <% tmp = skill.name %>
+    <% end %>
+    <% end %>
+
+    <br>
+    <% break %>
+    <% end %>

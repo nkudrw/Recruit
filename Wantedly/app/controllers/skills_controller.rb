@@ -8,7 +8,7 @@ class SkillsController < ApplicationController
   def create
       @skill = Skill.new(skills_params)
       @skill.save
-      redirect_to skills_path
+      redirect_to user_path(@skill.points.first.user_id)
   end
 
   def show
@@ -16,6 +16,8 @@ class SkillsController < ApplicationController
 
   private
    def skills_params
-     params.require(:skill).permit(:name)
+     params.require(:skill).permit(:name,
+     points_attributes: [:skill_id,:user_id]
+     )
    end
 end

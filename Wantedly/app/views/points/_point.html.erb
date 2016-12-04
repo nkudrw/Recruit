@@ -1,10 +1,10 @@
 <table><tr>
     <td>
-<%= button_to skill_points_path(skill), id: "like-button" do %>
+<%= button_to skill_points_path(skill),params: {user_id:  user.id} do %>
   <% end %>
   </td>
   <td>
-    <p><%= skill.point_count %><p>
+    <p><%= skill.point_count-1 %><p>
   </td>
   </tr>
   <table>

@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
          has_many :skills
          has_many :points , foreign_key: "user_id", dependent: :destroy
          has_many :skill_users, through: :points, source: :skill
+         accepts_nested_attributes_for :points
 end
