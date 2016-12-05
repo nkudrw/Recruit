@@ -5,5 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Skill.create(:name => PHP,:point_count => 1)
-Point.create(:user_id =>1,:skill_id=>1)
+Skill.create(:name => 'PHP',:point_count => '1')
+Point.create(:user_id =>'1',:skill_id=>'1')
