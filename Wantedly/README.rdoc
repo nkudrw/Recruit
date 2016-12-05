@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+実装環境は以下の通りです
+・Ruby Ruby on rails
+・herokuにデプロイ
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+備考
+・必須条件は全てクリアできていると思います．
+・他の人のスキルを追加しようとするときに，フォームがうまく出現しないことがあります．その場合はリロードをお願いします．
+・誰がプラスをしたのかを識別することができませんでした．中間テーブルに，誰によるプラスなのかを保持しておくことで実現できるのではないかと思います．
+・誰がプラスをしたのかが分かれば，キャンセル機能，スキルを隠す機能も実装できます．
+・同じスキルがついている人の一覧については，スキル名でデータベースから検索することで実現できると思います．
 
 
-Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
