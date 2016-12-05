@@ -10,7 +10,10 @@ class SkillsController < ApplicationController
   def create
       @skill = Skill.new(skills_params)
       @skill.save
-
+      respond_to do |format|
+          format.html { redirect_to user_path(@skill.points.first.user_id)}
+              format.js { render :index}
+  end
   end
 
   def show

@@ -1,12 +1,15 @@
 
 <br>
-    <% @user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill_user| %>
+    <% user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill_user| %>
     <% tmp = skill_user.name %>
-    <%= render partial: 'points/point', locals: { skill: skill_user ,user: @user} %>
-
-    <% @user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill| %>
+    <div id = "skill_point">
+    <%= render partial: 'points/point', locals: { skill: skill_user ,user: user} %>
+</div>
+    <% user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill| %>
     <% if tmp != skill.name %>
-    <%= render partial: 'points/point', locals: { skill: skill ,user: @user} %>
+    <div id = "skill_point">
+    <%= render partial: 'points/point', locals: { skill: skill ,user: user} %>
+</div>
     <% tmp = skill.name %>
     <% end %>
     <% end %>

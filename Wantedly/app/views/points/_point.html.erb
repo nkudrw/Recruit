@@ -3,7 +3,7 @@
       <p><%= skill.point_count-1 %><p>
     </td>
     <td>
-<%= link_to skill_points_path(skill_id: skill.id,user_id:  user.id),:method => :post do %>
+<%= link_to skill_points_path(skill_id: skill.id,user_id:  user.id),:method => :post, :remote => true do %>
 <i class="fa fa-plus-circle" aria-hidden="true"></i>
   <% end %>
   </td>
