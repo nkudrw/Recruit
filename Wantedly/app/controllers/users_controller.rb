@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       @skill = Skill.new
       @skill.points.build
       @skill_last = Skill.last
+ 
   end
 
 end

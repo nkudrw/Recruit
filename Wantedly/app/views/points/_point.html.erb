@@ -1,10 +1,19 @@
 <table><tr>
     <td>
-<%= button_to skill_points_path(skill),params: {user_id:  user.id} do %>
+      <p><%= skill.point_count-1 %><p>
+    </td>
+    <td>
+<%= link_to skill_points_path(skill_id: skill.id,user_id:  user.id),:method => :post do %>
+<i class="fa fa-plus-circle" aria-hidden="true"></i>
   <% end %>
   </td>
   <td>
-    <p><%= skill.point_count-1 %><p>
+  <span style="margin-right: 1em;"></span>
   </td>
+  <td>
+      <%= skill.name %>
+  </td>
+
   </tr>
   <table>
+<br>

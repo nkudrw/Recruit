@@ -10,7 +10,11 @@ class SkillsController < ApplicationController
   def create
       @skill = Skill.new(skills_params)
       @skill.save
-      redirect_to user_path(@skill.points.first.user_id)
+      format.html { redirect_to user_path(@skill.points.first.user_id) }
+       format.json { render :show, status: :created, location: @skill }
+       # JS形式でレスポンスを返します。
+       format.js { render :show }
+
   end
 
   def show
