@@ -1,4 +1,4 @@
-<h2>スキル一覧</h2>
+<h2>スキル・特徴</h2>
     <% @user.skill_users.sort{|a,b| b.point_count <=> a.point_count}.each do |skill_user| %>
     <% tmp = skill_user.name %>
     <%= skill_user.name %>

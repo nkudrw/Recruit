@@ -3,6 +3,8 @@ class SkillsController < ApplicationController
   def index
       @skills = Skill.order('point_count desc')
       @skill = Skill.new
+      @skill.points.build
+      @skill_last = Skill.last
   end
 
   def create

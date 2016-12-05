@@ -1,14 +1,17 @@
-<% if user_signed_in? %>
-  <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
-<% else %>
-  <li><%= link_to 'ログイン', new_user_session_path  %></li>
-  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
-<% end %>
-<%= link_to 'ユーザー一覧', users_path %>
-<h1>マイページ</h2>
-<h1>スキル一覧</h2>
-<%= render 'form' %>
+<div class="container">
+    <div class="row">
+  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+<h1><%= current_user.name %></h2>
+<h1>スキル</h2>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1">
+    <%= render 'form' %>
+</div>
+</div>
+<br>
+<br>
 <% @skills.each do |skill| %>
   <p><%= skill.name %></p>
-  <%= render partial: 'points/point', locals: { skill: skill } %>
-<% end %>
+</div>
+</div>
+</div>

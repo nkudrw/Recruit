@@ -1,3 +1,48 @@
 // Place all the styles related to the skills controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar-default {
+    border: 0;
+}
+.navbar {
+    background-color: white;
+    color: #ccc;
+    margin-bottom: 0px;
+}
+.navbar-default {
+  .navbar-brand {
+    color: black;
+    &:hover {
+      color: #ccc;
+    }
+  }
+  .navbar-nav > li > a {
+    color: black;
+    &:hover, &:focus {
+      color: #ccc;
+    }
+  }
+  .navbar-nav > .open > a {
+    background-color: transparent;
+    color: #ccc;
+    &:hover, &:focus {
+      background-color: transparent;
+      color: #ccc;
+    }
+  }
+}
+@media (max-width: 767px) {
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: black;
+    text-align: center;
+    &:hover, &:focus {
+      color: #ccc;
+    }
+  }
+  .navbar-default .navbar-toggle {
+    background-color: white;
+    &:hover, &:focus {
+      background-color: white;
+    }
+  }
+}
